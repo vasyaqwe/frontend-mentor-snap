@@ -1,0 +1,14 @@
+@use 'abstracts' as *;
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    color: $color-black;
+}
+
+a {
+    color: $color-grey;
+
+    &:hover {
+        color: $color-black;
+    }
+}

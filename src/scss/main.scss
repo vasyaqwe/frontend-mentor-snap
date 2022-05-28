@@ -1,0 +1,137 @@
+@use 'abstracts' as *;
+@use 'base' as *;
+@use 'components' as *;
+
+
+.hero {
+    margin-bottom: 3rem;
+
+    &__text {
+        &__heading {
+            font-size: min(9vw, 4rem);
+        }
+
+        &__p {
+            font-size: min(5vw, 1.1rem);
+            color: $color-grey;
+
+        }
+
+        &__imgs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            place-items: center;
+        }
+    }
+}
+
+@media(max-width: 420px) {
+    .hero__text__imgs {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 865px) {
+    .hero {
+        text-align: center;
+
+        &__img--desktop {
+            display: none;
+        }
+
+        &__text {
+            width: 90%;
+            margin-inline: auto;
+
+            &__heading {
+                margin-top: 1rem;
+            }
+
+            &__p {
+                margin-top: 1rem;
+            }
+
+            &__btn {
+                margin-top: 2rem;
+            }
+
+            &__imgs {
+                margin: 2rem 0 2rem 0;
+
+                &>img+img {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 865px) {
+    .lb::after {
+        content: "\a";
+        white-space: pre;
+    }
+
+    .hero {
+        margin-top: 3rem;
+        display: flex;
+        grid-template-columns: 1fr 1fr;
+        width: min(80%, 100em);
+        margin-inline: auto;
+        align-items: end;
+
+        &__text {
+            margin-right: 6rem;
+
+
+            &__heading {
+                font-size: min(5vw, 5rem);
+                line-height: min(5vw, 5rem);
+            }
+
+            &__p {
+                margin-top: 1rem;
+                font-size: min(5vw, 1.05rem);
+            }
+
+            &__btn {
+                margin-top: 2rem;
+            }
+
+            &__imgs {
+                margin: 4rem 0 0 0;
+
+                &>img+img {
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+        &__img--mobile {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero {
+        &__text {
+            &__p {
+                margin-top: 2rem;
+                font-size: min(5vw, 1.2rem);
+
+            }
+
+            &__btn {
+                margin-top: 3rem;
+                font-size: 1.2rem;
+            }
+
+            &__imgs {
+                margin-top: 6rem;
+
+            }
+        }
+    }
+}

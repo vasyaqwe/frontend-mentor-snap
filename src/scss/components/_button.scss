@@ -1,0 +1,63 @@
+@use '../abstracts' as *;
+
+.btn {
+    border: none;
+    background: none;
+    color: $color-grey;
+    border: 2px solid $color-grey;
+    border-radius: 12px;
+    padding: 0.5em 2em;
+
+    &:hover {
+        color: $color-black;
+        cursor: pointer;
+    }
+}
+
+.btn--login {
+    border: none;
+
+    &:hover {
+        outline: 2px solid $color-black;
+    }
+}
+
+.btn--register {
+    &:hover {
+        border-color: $color-black;
+        background-color: $color-black;
+        color: white;
+    }
+}
+
+.btn--hero {
+    &:hover {
+        background-color: $color-black;
+        border-color: $color-black;
+        color: white;
+    }
+}
+
+@media (max-width: 865px) {
+    .btn--register {
+        margin-top: 0.5rem;
+    }
+
+    .nav-toggle {
+        position: fixed;
+        top: 20px;
+        right: 5%;
+        cursor: pointer;
+        z-index: 200;
+    }
+}
+
+@media(min-width: 865px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .btn--register {
+        margin-left: 1rem;
+    }
+}
