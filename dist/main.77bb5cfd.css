@@ -257,7 +257,7 @@ nav {
     margin-left: 2rem;
   }
   .primary-nav__login {
-    position: fixed;
+    position: absolute;
     top: 2.3%;
     right: 3%;
   }
@@ -325,6 +325,9 @@ nav {
   }
   .hero__img--desktop {
     display: none;
+  }
+  .hero__img--mobile > img {
+    margin-inline: auto;
   }
   .hero__text {
     width: 90%;

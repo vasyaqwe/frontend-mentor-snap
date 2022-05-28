@@ -40,6 +40,10 @@
             display: none;
         }
 
+        &__img--mobile>img {
+            margin-inline: auto;
+        }
+
         &__text {
             width: 90%;
             margin-inline: auto;

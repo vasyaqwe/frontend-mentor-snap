@@ -26,9 +26,11 @@ for (let i = 0; i < dropdownBtns.length; i++) {
         if (paragraph.hasAttribute('hidden')) {
             paragraph.removeAttribute('hidden');
             dropdownBtns[i].setAttribute('aria-expanded', true);
+            dropdownBtns[i].children[1].src = '/icon-arrow-up.a3a196fb.svg';
         } else {
             paragraph.setAttribute('hidden', true);
             dropdownBtns[i].setAttribute('aria-expanded', false);
+            dropdownBtns[i].children[1].src = '/icon-arrow-down.c7e40f0e.svg';
         }
     })
 }
